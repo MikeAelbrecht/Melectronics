@@ -10,7 +10,6 @@ mongoose.connect("mongodb://localhost/recipedb");
 
 require("./models/Recipe");
 
-
 var index = require("./routes/index");
 let cors = require("cors");
 
