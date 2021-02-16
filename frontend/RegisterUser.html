@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sign up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1><u>Sign up</u></h1>
+</div>
+
+<style>
+  h2 {text-align: center;}
+  p2 {color: red;}
+  p2 {font-style: oblique;}
+</style>  
+
+<div class="container">
+  <h2>Welcome to Melectronics, to sign up please fill in all forms.</h2>
+
+  <div class="form-group">
+    <label for="username">Username:</label>
+    <input type="username" class="form-control" id="username" placeholder="Enter username" name="username">
+  </div>
+
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password:</label><p2 id="errorMessageP"></p2>
+    <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+  </div>
+
+  <div class="form-group">
+    <label for="repassword">Re-enter password:</label><p2 id="errorMessageP"></p2>
+    <input type="password" class="form-control" id="repassword" placeholder="Re-enter password" name="repassword">
+  </div>
+ 
+  <button type="submit" class="btn btn-default" onclick="signupFunction()">Submit</button>
+
+  <script>
+
+    function signupFunction()
+    {
+      var username, email, password, repassword, errorMessage;
+      username = document.getElementById("username").value;
+      email = document.getElementById("email").value;
+      password = dcument.getElementById("password").value;
+      repassword= document.getElementById("repassword").vlaue;
+
+      if (password == repassword)
+      {
+         createuserFunction();
+      }
+
+      else if (password != repassword)
+      {
+        errorMessage = "Passwords do not match!";
+        document.getElementById("errorMessageP").innerHTML = errorMessage;
+      }
+      
+    }
+
+    function createuserFunction()
+    {
+
+    }
+</div>  
